@@ -1,6 +1,43 @@
+.header{
+    border: 1px solid black;
+    height: 100px;
+}
+ .logo img {
+    width: 100px;
+    height: 100px;
+}
 
-#binge-logo-img{
-position: fixed;
-margin-left: -5px;
-margin-top: -50px;
+.nav-items ul{
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin-top:-90px ;
+    margin-right: 20px;
+
+}
+.nav-items ul li{
+    margin: 5px;
+}
+.search-btn{
+    padding: 1px;
+}
+
+.restaurant-card{
+    border: 1px solid black;
+    padding: 2px;
+    margin-right: 10px;
+    margin: 8px;
+}
+
+.restaurant-card img{
+    /* padding: 1px; */
+    width: 250px;
+    /* border-radius: 10px; */
+    /* margin-bottom: -24px; */
+    
+}
+.body{
+    display: flex;
+    flex-wrap: wrap;
+
 }
