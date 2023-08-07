@@ -1,9 +1,9 @@
 import RestaurantCard from "./RestaurantCard";
-import resList from "../utils/mockData";
+import Shimmer from "./Shimmer"
 import { useEffect, useState } from "react";
 
 const Body = () => {
-  const [filteredRestaurant, setFilteredRestaurant] = useState(resList);
+  const [filteredRestaurant, setFilteredRestaurant] = useState();
 
   useEffect(() => {
     getData();
@@ -12,10 +12,12 @@ const Body = () => {
   const getData = async () => {
     const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.6691565&lng=77.45375779999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
     const json = await data.json();
-    setFilteredRestaurant(json?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+    setFilteredRestaurant(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
   }
 
-
+if(!filteredRestaurant){
+  return <Shimmer/>
+}
   return (
     <div className="body">
       <div className="filter">
@@ -31,10 +33,15 @@ const Body = () => {
           Top
         </button>
       </div>
-      <div className="res-container"></div>
-      {filteredRestaurant.map((restaurant, index) => {
-        return <RestaurantCard key={restaurant?.info?.id} resData={restaurant?.info} />;
-      })}
+      <div className="res-container">
+
+        {filteredRestaurant?.map((restaurant) => {
+          return <RestaurantCard key={restaurant?.info?.id} resData={restaurant?.info} />;
+        })}
+
+
+      </div>
+
     </div>
   );
 };

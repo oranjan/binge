@@ -1,7 +1,6 @@
 import { IMG_URL } from "../utils/constants";
 
 const RestaurantCard = (props) => {
-    //FXN
     return (
       <div className="restaurant-card">
         <img
