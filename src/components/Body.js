@@ -14,11 +14,7 @@ const Body = () => {
     const json = await data.json();
     setFilteredRestaurant(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
   }
-
-if(!filteredRestaurant){
-  return <Shimmer/>
-}
-  return (
+return !filteredRestaurant?<Shimmer/> :(
     <div className="body">
       <div className="filter">
         <button
