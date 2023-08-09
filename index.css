@@ -29,6 +29,7 @@
     padding: 2px;
     margin-right: 10px;
     margin: 8px;
+    cursor: pointer;
 }
 
 .restaurant-card img{
@@ -70,4 +71,9 @@
 
 .login-btn{
     margin-left: 30px;
+    cursor: pointer;
+}
+
+.search{
+    margin-left: 10px;
 }
