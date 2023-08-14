@@ -1,6 +1,8 @@
 import { IMG_URL } from "../utils/constants";
 
+
 const RestaurantCard = (props) => {
+  
     return (
       <div className="restaurant-card">
         <img
@@ -10,8 +12,7 @@ const RestaurantCard = (props) => {
           alt=""
         />  
         <h2>{props.resData?.name}</h2>
-        <h3>{props.resData?.deliveryTime} minutes</h3>
-        <h3>{props.resData?.avgRating}</h3>
+        <h3>{props.resData?.avgRating}⭐</h3>
       </div>
     ); 
   };
