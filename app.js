@@ -1,15 +1,19 @@
-import React, { Children } from "react";
+
 import ReactDOM from "react-dom/client";
 import Header from "./src/components/Header";
 import Body from "./src/components/Body";
 import About from "./src/components/About";
 import Contact from "./src/components/Contact";
 import Error from "./src/components/Error";
+import RestaurantMenu from "./src/components/RestaurantMenu";
 
-import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+
+import { createBrowserRouter, RouterProvider, Outlet} from "react-router-dom";
 
 
 const Applayout = () => {
+  
+
   return (
     <>
       <Header />
@@ -36,7 +40,12 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />
+      },
+      {
+        path: "/restaurants/:resId",
+        element: <RestaurantMenu/>
       }
+
     ]
   },
 ]);

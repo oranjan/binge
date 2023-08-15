@@ -2,17 +2,17 @@ import { IMG_URL } from "../utils/constants";
 
 
 const RestaurantCard = (props) => {
-  
+  const{cloudinaryImageId,name,avgRating}=props.resData;
     return (
       <div className="restaurant-card">
         <img
           src={
-            IMG_URL + props.resData?.cloudinaryImageId
+            IMG_URL +cloudinaryImageId
           }
           alt=""
         />  
-        <h2>{props.resData?.name}</h2>
-        <h3>{props.resData?.avgRating}⭐</h3>
+        <h2>{name}</h2>
+        <h3>{avgRating}⭐</h3>
       </div>
     ); 
   };
