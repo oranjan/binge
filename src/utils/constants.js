@@ -2,4 +2,4 @@
 
  export const LOGO_URL="https://th.bing.com/th/id/OIG.uqrj_KShADUAYupkgviS?pid=ImgGn";
 
- export const MENU_URL="https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.6691565&lng=77.45375779999999&restaurantId=";
+ export const MENU_URL="https://corsproxy.io/?https%3A%2F%2Fwww.swiggy.com%2Fdapi%2Fmenu%2Fpl%3Fpage-type%3DREGULAR_MENU%26complete-menu%3Dtrue%26lat%3D28.6691565%26lng%3D77.45375779999999%26restaurantId%3D";
