@@ -5,11 +5,13 @@ import Body from "./src/components/Body";
 import About from "./src/components/About";
 import Contact from "./src/components/Contact";
 import Error from "./src/components/Error";
+import Cart from "./src/components/Cart";
 import RestaurantMenu from "./src/components/RestaurantMenu";
 
-
 import { createBrowserRouter, RouterProvider, Outlet} from "react-router-dom";
+import { Suspense, lazy } from "react";
 
+const Cart =lazy(()=>import("./src/components/Cart"))
 
 const Applayout = () => {
   
@@ -41,6 +43,12 @@ const router = createBrowserRouter([
         path: "/contact",
         element: <Contact />
       },
+      {
+        path: "/cart",
+        element:( <Suspense fallback= {"hello"}>
+          <Cart/>
+          </Suspense> )
+     },
       {
         path: "/restaurants/:resId",
         element: <RestaurantMenu/>

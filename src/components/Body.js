@@ -2,6 +2,7 @@ import RestaurantCard from "./RestaurantCard";
 import Shimmer from "./Shimmer"
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
+import useOnlineStatus from "../utils/useOnlineStatus"
 
 const Body = () => {
   const [filteredRestaurant, setFilteredRestaurant] = useState();
@@ -9,9 +10,7 @@ const Body = () => {
 
   const [searchText, setSearchText] = useState([]);
 
-
-
-
+  const onlineStatus= useOnlineStatus();
 
   useEffect(() => {
     getData();
@@ -24,6 +23,11 @@ const Body = () => {
     setFilteredRestaurant(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
     setRestaurants(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
   }
+  
+
+  if(!onlineStatus)
+  { return  <h2>
+    😒Make sure you're online. Binge 🍰🍪🍔🍕😋 works best with an internet connection.</h2>}
 
   return !restaurants ? <Shimmer /> : (
     <div className="body">
