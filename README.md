@@ -1,14 +1,10 @@
-# Food Ordering Website
-## install CORS extension in chrome browser for viewing the page :https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf
-## Live url : https://binge-food.netlify.app/
-This React 18 project integrates Swiggy's API to create a food ordering web app. Leveraging React Router DOM 6 for navigation, it features a search bar, restaurant filtering, and shimmer UI for smoother loading. Parcel bundler optimizes assets for  deployment, providing an efficient, engaging restaurant exploration experience.
-## Features
+Food Ordering Website
+Live url : https://binge-food.netlify.app/
+This React 18 project integrates Swiggy's API to create a food ordering web app. Leveraging React Router DOM 6 for navigation, it features a search bar, restaurant filtering, and shimmer UI for smoother loading. Parcel bundler optimizes assets for deployment, providing an efficient, engaging restaurant exploration experience.
 
-- Browse a wide range of restaurants and their menus.
-- Search for specific dishes.
-- Filter out top restaurants
-- Add items to the cart.(still in development)
-
-### Happy food ordering! 🍔🍕🍣
-
-
+Features
+Browse a wide range of restaurants and their menus.
+Search for specific dishes.
+Filter out top restaurants
+Add items to the cart.(still in development)
+Happy food ordering! 🍔🍕🍣
