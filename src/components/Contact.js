@@ -2,7 +2,9 @@
 const Contact = () => {
   return (
     <div>
-      <h1>email: ranjnmehta@gmail.com</h1>
+     <h2> Email: rnjnmhta@gmail.com</h2>
+     <h2> Phone number :9XXXXXXXX</h2>
+
     </div>
   )
 }
