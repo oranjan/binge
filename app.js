@@ -8,13 +8,16 @@ import Error from "./src/components/Error";
 import Cart from "./src/components/Cart";
 import RestaurantMenu from "./src/components/RestaurantMenu";
 
-import { createBrowserRouter, RouterProvider, Outlet} from "react-router-dom";
-import { Suspense, lazy } from "react";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
-const Cart =lazy(()=>import("./src/components/Cart"))
+// import { Suspense, lazy } from "react";
 
-const Applayout = () => {
-  
+// const Cart = lazy(() => import("./src/components/Cart"))
+
+import Cart from "./src/components/Cart";
+
+function Applayout() {
+
 
   return (
     <>
@@ -22,7 +25,7 @@ const Applayout = () => {
       <Outlet />
     </>
   );
-};
+}
 
 
 const router = createBrowserRouter([
@@ -45,13 +48,12 @@ const router = createBrowserRouter([
       },
       {
         path: "/cart",
-        element:( <Suspense fallback= {"hello"}>
-          <Cart/>
-          </Suspense> )
-     },
+        element: <Cart />
+
+      },
       {
         path: "/restaurants/:resId",
-        element: <RestaurantMenu/>
+        element: <RestaurantMenu />
       }
 
     ]

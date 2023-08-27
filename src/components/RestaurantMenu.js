@@ -2,15 +2,14 @@ import { useParams } from "react-router-dom";
 import Shimmer from "./Shimmer";
 import useRestaurantMenu from "../utils/useRestaurantMenu";
 
-const RestaurantMenu = () => {
+function RestaurantMenu() {
   const { resId } = useParams();
-  const resInfo =useRestaurantMenu(resId); // abstracted fetch functionality into custom hook
-  if (resInfo == null) {       // might be null/undefined so == used 
-    return <Shimmer />
+  const resInfo = useRestaurantMenu(resId); // abstracted fetch functionality into custom hook
+  if (resInfo == null) { // might be null/undefined so == used 
+    return <Shimmer />;
   }
 
-  const { name, cuisines, costForTwoMessage, avgRating }
-    = resInfo?.cards[0]?.card?.card?.info
+  const { name, cuisines, costForTwoMessage, avgRating } = resInfo?.cards[0]?.card?.card?.info;
 
   let { itemCards } = resInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card;
 
@@ -26,7 +25,7 @@ const RestaurantMenu = () => {
 
       {itemCards?.map((item) => {
         return <li key={item?.card?.info?.id}> {item?.card?.info?.name}
-          {" Rs. "} {item?.card?.info?.price / 100}  </li>
+          {" Rs. "} {item?.card?.info?.price / 100}  </li>;
       })}
 
 
@@ -34,7 +33,7 @@ const RestaurantMenu = () => {
 
 
     </div>
-  )
+  );
 }
 
 export default RestaurantMenu;

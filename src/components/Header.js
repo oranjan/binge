@@ -3,8 +3,8 @@ import { LOGO_URL } from "../utils/constants";
 import { Link } from "react-router-dom";
 
 
-const Header = () => {
-  const [loginBtn, setLoginBtn] = useState("Login")
+function Header() {
+  const [loginBtn, setLoginBtn] = useState("Login");
 
   return (
     <div className="flex justify-between border-gray-20  shadow-lg">
@@ -12,9 +12,7 @@ const Header = () => {
         <img
           className="w-24 rounded-sm"
           src={LOGO_URL}
-          alt=" logo-img"
-
-        />
+          alt=" logo-img" />
       </div>
 
       <div className="flex gap-24  items-center">
@@ -26,14 +24,12 @@ const Header = () => {
 
 
         </ul>
-        <button className=" hover:text-gray-400  font-extralight px-16 " onClick={
-
-          () => loginBtn === "Login" ? setLoginBtn("Logout") :
-            setLoginBtn("Login")} >{loginBtn}
+        <button className=" hover:text-gray-400  font-extralight px-16 " onClick={() => loginBtn === "Login" ? setLoginBtn("Logout") :
+          setLoginBtn("Login")}>{loginBtn}
         </button>
       </div>
     </div>
   );
-};
+}
 
 export default Header;
