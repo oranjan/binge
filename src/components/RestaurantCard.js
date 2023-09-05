@@ -1,9 +1,14 @@
 import { IMG_URL } from "../utils/constants";
 
 
-function RestaurantCard(props) {
+const RestaurantCard = (props) => {
 
-  const { cloudinaryImageId, name, avgRating, areaName, cuisines } = props.resData;
+  const { cloudinaryImageId
+    , name,
+    avgRating,
+    areaName,
+    cuisines } = props.resData;
+
   return (
     <div className="restaurant-card w-48 p-1 rounded-md shadow-lg m-1  font-thin">
       <img
@@ -18,4 +23,15 @@ function RestaurantCard(props) {
   );
 }
 
-  export default RestaurantCard;
+export const wrappedCard=(RestaurantCard)=>{
+return (props)=>{
+
+  return <div>
+      <label className="absolute bg-green-800 text-white rounded-sm px-1">Veg</label>
+      <RestaurantCard {...props}/>
+  </div>
+
+}
+}
+
+export default RestaurantCard;

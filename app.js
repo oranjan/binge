@@ -10,10 +10,6 @@ import RestaurantMenu from "./src/components/RestaurantMenu";
 
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
-// import { Suspense, lazy } from "react";
-
-// const Cart = lazy(() => import("./src/components/Cart"))
-
 import Cart from "./src/components/Cart";
 
 function Applayout() {
