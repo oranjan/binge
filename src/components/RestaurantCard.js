@@ -2,7 +2,6 @@ import { IMG_URL } from "../utils/constants";
 
 
 const RestaurantCard = (props) => {
-
   const { cloudinaryImageId
     , name,
     avgRating,
