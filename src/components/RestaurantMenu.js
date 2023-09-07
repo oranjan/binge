@@ -14,7 +14,6 @@ const RestaurantMenu = () => {
     name,
     cuisines,
     avgRating,
-    areaName,
     totalRatingsString
   } = resInfo?.cards[0]?.card?.card?.info;
 
